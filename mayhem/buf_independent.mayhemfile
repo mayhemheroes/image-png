@@ -1,0 +1,4 @@
+project: PROJECT
+target: buf_independent
+cmds:
+- cmd: /out/buf_independent
