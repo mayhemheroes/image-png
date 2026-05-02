@@ -14,7 +14,7 @@ jobs:
         features: [""]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6.0.2
 
     - uses: dtolnay/rust-toolchain@nightly
       if: ${{ matrix.rust == '1.73.0' }}
@@ -36,7 +36,7 @@ jobs:
         os: [ubuntu-latest, macos-latest] # macos-latest is ARM
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6.0.2
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: nightly
@@ -55,7 +55,7 @@ jobs:
     # we are using the cross project for cross compilation:
     # https://github.com/cross-rs/cross
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
 
       - name: Install or use cached cross-rs/cross
         uses: baptiste0928/cargo-install@v1
@@ -78,7 +78,7 @@ jobs:
         os: [ubuntu-latest, macos-latest] # macos-latest is ARM
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6.0.2
     - run: rustup default stable
     - name: test
       run: |
@@ -87,7 +87,7 @@ jobs:
   rustfmt:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6.0.2
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
