@@ -1,0 +1,5 @@
+project: image-png
+target: decode
+cmds:
+  - cmd: /mayhem/decode
+    libfuzzer: true

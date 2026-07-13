@@ -1,0 +1,5 @@
+project: image-png
+target: buf_independent
+cmds:
+  - cmd: /mayhem/buf_independent
+    libfuzzer: true
