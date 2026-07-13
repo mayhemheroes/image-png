@@ -1,9 +1,5 @@
 name: Rust CI
-on:
-  push:
-    branches: [ master, main, next ]
-  pull_request:
-    branches: [ master, main, next ]
+on: workflow_dispatch
 jobs:
   build:
     strategy:
